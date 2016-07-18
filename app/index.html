@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.css" />
+    <link rel="stylesheet" href="bower_components/chosen/chosen.min.css" />
+    <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-datepicker/dist/angular-datepicker.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/summernote/dist/summernote.css" />
+    <link rel="stylesheet" href="bower_components/plupload/src/jquery.ui.plupload/css/jquery.ui.plupload.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="app">
+    <!--[if lte IE 8]>
+    <p class="browsehappy">
+        You are using an <strong>outdated</strong>
+        browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.
+    </p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <toaster-container toaster-options="{'position-class': 'toast-top-center', 'closeButton': true}"></toaster-container>
+    <div ui-view></div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_zh-hans-cn.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/metisMenu/dist/metisMenu.js"></script>
+    <script src="bower_components/chosen/chosen.jquery.min.js"></script>
+    <script src="bower_components/angular-chosen-localytics/chosen.js"></script>
+    <script src="bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="bower_components/angular-datatables/dist/angular-datatables.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/colreorder/angular-datatables.colreorder.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/columnfilter/angular-datatables.columnfilter.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/colvis/angular-datatables.colvis.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/fixedcolumns/angular-datatables.fixedcolumns.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/fixedheader/angular-datatables.fixedheader.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/scroller/angular-datatables.scroller.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/select/angular-datatables.select.js"></script>
+    <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/moment/locale/zh-cn.js"></script>
+    <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
+    <script src="bower_components/angular-datepicker/dist/angular-datepicker.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/AngularJS-Toaster/toaster.js"></script>
+    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="bower_components/summernote/dist/summernote.js"></script>
+    <script src="bower_components/summernote/lang/summernote-zh-CN.js"></script>
+    <script src="bower_components/angular-summernote/dist/angular-summernote.js"></script>
+    <script src="bower_components/plupload/js/plupload.full.min.js"></script>
+    <script src="bower_components/plupload/js/moxie.js"></script>
+    <script src="bower_components/qiniu/src/qiniu.js"></script>
+    <script src="bower_components/qiniu/demo/scripts/ui.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/config/routes.config.js"></script>
+    <script src="scripts/config/angular_confirm.js"></script>
+    <script src="scripts/config/directives.js"></script>
+    <script src="scripts/config/nonangular.js"></script>
+    <script src="scripts/config/utils.js"></script>
+    <script src="components/uploader/single_uploader.directive.js"></script>
+    <script src="components/auth/login.controller.js"></script>
+    <script src="components/auth/auth_service.js"></script>
+
+    <script src="scripts/config/api.config.js"></script>
+    <script src="scripts/config/loading_bar.config.js"></script>
+    <script src="scripts/config/http.config.js"></script>
+    <script src="scripts/interceptors/auth_interceptor.js"></script>
+    <script src="components/app/app.controller.js"></script>
+    <!--users-->
+    <script src="components/users/show.controller.js"></script>
+    <script src="components/users/routes.js"></script>
+    <script src="components/users/list.controller.js"></script>
+    <script src="components/users/users_service.js"></script>
+    <script src="components/users/settings/list.controller.js"></script>
+    <script src="components/users/settings/create.controller.js"></script>
+    <script src="components/users/settings/edit.controller.js"></script>
+
+    <!--courses-->
+    <script src="components/courses/list.controller.js"></script>
+    <script src="components/courses/routes.js"></script>
+    <script src="components/courses/edit.controller.js"></script>
+    <script src="components/courses/create.controller.js"></script>
+    <script src="components/courses/page.controller.js"></script>
+    <script src="components/courses/courses_service.js"></script>
+    <script src="components/courses/page_edit.controller.js"></script>
+    <script src="components/courses/page_create.js"></script>
+    <script src="components/courses/video.controller.js"></script>
+
+    <!--teachers-->
+    <script src="components/teachers/edit.controller.js"></script>
+    <script src="components/teachers/routes.js"></script>
+    <script src="components/teachers/list.controller.js"></script>
+    <script src="components/teachers/create.controller.js"></script>
+    <script src="components/teachers/teachers_service.js"></script>
+    <script src="components/teachers/show.controller.js"></script>
+
+
+
+    <!-- endbuild -->
+</body>
+
+</html>

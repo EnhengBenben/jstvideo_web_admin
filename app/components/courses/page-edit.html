@@ -1,0 +1,39 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h5>编辑章节</h5>
+    <div class="ibox-tools">
+      <a ng-click="vm.cancel()"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="ibox-content">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">章节名称</label>
+        <div class="col-md-9">
+          <input class="form-control" type="text" ng-model="vm.edit.name"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">授课老师</label>
+        <div class="col-md-9">
+          <select data-placeholder="请选择授课老师，可多选" chosen multiple class="chosen-select form-control"
+                  ng-model="vm.edit.teachers" ng-options="i.id as i.name for i in vm.teachers">
+
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">章节顺序</label>
+        <div class="col-md-9">
+          <input class="form-control" type="text" ng-model="vm.edit.sort"/>
+          <span class="help-block">越小排序越在前面</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-9 col-md-offset-2">
+          <div class="btn btn-primary" ng-click="vm.save()">保存</div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

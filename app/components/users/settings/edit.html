@@ -1,0 +1,23 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h5>编辑{{vm.create.name}}</h5>
+    <div class="ibox-tools">
+      <a ng-click="vm.cancel()"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="ibox-content">
+    <form class="form-horizontal" novalidate>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">{{vm.create.name}}</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" ng-model="vm.settings.name"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="btn btn-primary" ng-click="vm.save()">保存</div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

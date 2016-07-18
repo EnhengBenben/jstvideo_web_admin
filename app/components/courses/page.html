@@ -1,0 +1,18 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h5>课程章节管理</h5>
+    <div class="ibox-tools">
+      <div class="btn btn-primary btn-sm" ng-click="vm.create()">添加新章节</div>
+    </div>
+  </div>
+  <div class="ibox-content" style="padding-top: 0">
+    <div style="    background-color: #E4F6FF;margin: 10px auto;line-height: 30px;padding-left: 10px">
+      <p style="margin: 0;">您可以设定在这里课程的章节，并上传章节视频</p>
+    </div>
+    <div class="table-responsive">
+      <table id="dt-courses" datatable dt-instance="vm.dtInstance" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"
+             class="table table-striped table-bordered table-hover row-border hover"></table>
+    </div>
+  </div>
+</div>
+

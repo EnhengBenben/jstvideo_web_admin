@@ -1,0 +1,45 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h5>修改课程信息</h5>
+    <div class="ibox-tools">
+      <a ng-click="vm.cancel()"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="ibox-content" style="position: relative">
+    <div style="position: absolute;right: 118px;top: 10px;width: 240px;height: 134px;border: 1px solid #f3f3f4;">
+      <img src="{{vm.create.img_url}}" alt="此处放置图片" style="height: 100%;width: 100%">
+    </div>
+    <form name="courseEdit" class="form-horizontal">
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">课程名称</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" ng-model="vm.create.name" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">课程图片</label>
+        <div class="col-md-6">
+          <single-uploader url="vm.create.img_url" name="vm.create.img_url"></single-uploader>
+          <span class="help-block">此图片用于用户端封面介绍，建议大小 480*268</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">课程简介</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" ng-model="vm.create.excerpt"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">课程介绍</label>
+        <div class="col-md-9">
+          <summernote height="300" lang="zh-CN" ng-model="vm.create.introduce" placeholder="请输入课程介绍"></summernote>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-9 col-md-offset-2">
+          <div class="btn btn-primary" ng-click="vm.save()">保存</div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

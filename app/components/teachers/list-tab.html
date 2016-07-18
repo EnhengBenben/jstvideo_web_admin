@@ -1,0 +1,16 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h4>老师列表</h4>
+  </div>
+  <div class="ibox-content" style="position: relative;padding-bottom: 0">
+    <uib-tabset style="background:white;">
+      <uib-tab ui-sref-active="active" ui-sref="app.teachers.tab.list({status: 'published'})" heading="已发布"></uib-tab>
+      <uib-tab ui-sref-active="active" ui-sref="app.teachers.tab.list({status: 'pending'})" heading="已禁用"></uib-tab>
+      <div class="btn list-inline btn-sm btn-primary" ui-sref="app.teachers.create"
+           style="position: absolute;right: 20px">添加新老师
+      </div>
+    </uib-tabset>
+  </div>
+  <div ui-view></div>
+</div>
+

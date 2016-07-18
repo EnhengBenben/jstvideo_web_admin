@@ -1,0 +1,15 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h4>用户设置</h4>
+  </div>
+  <div class="ibox-content" style="position: relative;padding-bottom: 0">
+    <uib-tabset style="background:white;">
+      <uib-tab active="false" ui-sref-active="active" ui-sref="app.users.settings.list({status: 'identity'})"
+               heading="身份"></uib-tab>
+      <uib-tab ui-sref-active="active" ui-sref="app.users.settings.list({status: 'duty'})" heading="职称"></uib-tab>
+      <uib-tab ui-sref-active="active" ui-sref="app.users.settings.list({status: 'education'})" heading="学历"></uib-tab>
+    </uib-tabset>
+  </div>
+  <div ui-view></div>
+</div>
+

@@ -1,0 +1,43 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul side-navigation class="nav metismenu" id="side-menu">
+      <li class="nav-header">
+        <div class="dropdown profile-element">
+          <span style="color:white;">
+            在线教育管理系统
+          </span>
+        </div>
+        <div class="logo-element">
+          <i class="fa fa-2x fa-medkit"></i>
+        </div>
+      </li>
+      <li ng-class="{active: $state.includes('app.users')}">
+        <a href=""><i class="fa fa-user" style="font-size: 1.4rem;padding-left: 4px;width: 16.7px;height: 13px"></i><span
+          class="nav-label">用户管理</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('app.users')}">
+          <li ui-sref-active="active"><a ui-sref="app.users.list({status:'publish'})">用户列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="app.users.list({status:'pending'})">禁用用户</a></li>
+          <li ui-sref-active="active"><a ui-sref="app.users.settings.list({status:'identity'})">用户设置</a></li>
+          <!--<li ui-sref-active="active"><a ui-sref="app.users.account">用户统计</a></li>-->
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('app.courses')}">
+        <a href=""><i class="fa fa-graduation-cap" aria-hidden="true"></i><span class="nav-label">课程管理</span><span
+          class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('app.courses')}">
+          <li ui-sref-active="active"><a ui-sref="app.courses.tab.list({status:'published'})">课程列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="app.courses.create">添加课程</a></li>
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('app.teachers')}">
+        <a href=""><i class="fa fa-user-secret" aria-hidden="true"
+                      style="width: 16.7px;height: 13px;padding-left: 2px;font-size: 14px"></i><span class="nav-label">老师管理</span><span
+          class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('app.teachers')}">
+          <li ui-sref-active="active"><a ui-sref="app.teachers.tab.list({status:'published'})">老师列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="app.teachers.create">添加老师</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

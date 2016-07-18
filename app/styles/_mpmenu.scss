@@ -1,0 +1,81 @@
+.mp-menu-preview {
+  position: relative;
+  width: 317px;
+  height: 580px;
+  background: transparent url(/images/bg_mobile_head.png) no-repeat 0 0;
+  background-position: 0 0;
+  border: 1px solid #e7e7eb;
+  .mp-title {
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 15px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    margin: 0 30px;
+  }
+
+  // 底部一级菜单列表
+  .mp-menus {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #e7e7eb;
+    background: transparent url(/images/bg_mobile_foot.png) no-repeat 0 0;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding-left: 43px;
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .menu-wrapper {
+      padding: 15px 0;
+    }
+  }
+  .mp-menu.active {
+    a {
+      color: $navy;
+    }
+    border: 1px solid $navy;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  .mp-menu {
+    position: relative;
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    border-left: 1px solid #e8e8e8;
+  }
+
+  // 二级菜单列表
+  .mp-sub-menus {
+    bottom: 60px;
+    background-color: #fafafa;
+    border-top-width: 0;
+    position: absolute;
+    border: 1px solid #d0d0d0;
+    width: 100%;
+  }
+  .mp-sub-menu {
+    border-top: 1px solid #e8e8e8;
+  }
+  .mp-sub-menu.active {
+    a {
+      color: $navy;
+    }
+    border: 1px solid $navy;
+  }
+}
+.mp-menus {
+  .menu {
+    width: 33.3333%;
+  }
+}

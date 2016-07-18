@@ -1,0 +1,38 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h5>上传视频</h5>
+    <div class="ibox-tools">
+      <a ng-click="vm.cancel()"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="ibox-content">
+    <form class="form-horizontal">
+      <div class="form-group" style="    background-color: #E4F6FF;width: 83%;margin: 10px auto;line-height: 30px;">
+        <div class="col-md-9 col-md-offset-2">
+          <p style="margin: 0;">请您上传章节视频,如果原来有视频,将会把原来的视频覆盖</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">上传视频</label>
+        <div class="col-md-9" id="container">
+          <!--<single-uploader url="vm.page.video"></single-uploader>-->
+          <input type="file" ng-model="vm.pag.video" id="pickfiles" class="form-control"/>
+          <span class="help-block" style="color: #f00;" ng-if="vm.percent == 100">视频已传</span>
+          <div ng-if="vm.percent != 0 && vm.percent != 100">
+            <small><em>请等待上传</em></small>
+            <!--<uib-progressbar class="progress-striped active" value="dynamic" type="{{type}}">{{type}}<i ng-show="showWarning">!!! Watch out !!!</i></uib-progressbar>-->
+            <div class="progress progress-striped active m-b-sm">
+              <div style="width: {{vm.percent}}%;" class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-9 col-md-offset-2">
+          <div class="btn btn-primary" ng-click="vm.cancel()">暂不上传</div>
+          <div class="btn btn-primary" ng-click="vm.save()">上传完成</div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h4>课程列表</h4>
+  </div>
+  <div class="ibox-content" style="position: relative;padding-bottom: 0">
+    <uib-tabset style="background:white;">
+      <uib-tab active="false" ui-sref-active="active" ui-sref="app.courses.tab.list({status: 'published'})"
+               heading="已发布"></uib-tab>
+      <uib-tab ui-sref-active="active" ui-sref="app.courses.tab.list({status: 'pending'})" heading="草稿"></uib-tab>
+      <uib-tab ui-sref-active="active" ui-sref="app.courses.tab.list({status: 'recorded'})" heading="已推荐"></uib-tab>
+      <div class="btn list-inline btn-sm btn-primary" ui-sref="app.courses.create"
+           style="position: absolute;right: 20px">添加新课程
+      </div>
+    </uib-tabset>
+  </div>
+  <div ui-view></div>
+</div>
+

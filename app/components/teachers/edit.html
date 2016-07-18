@@ -1,0 +1,58 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h5>编辑</h5>
+    <div class="ibox-tools">
+      <a ng-click="vm.cancel()"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="ibox-content" style="position: relative">
+    <div style="position: absolute;right: 130px;top: 20px;width: 122px;height: 170px;border: 1px solid #f3f3f4;">
+      <img src="{{vm.create.img_url}}" alt="" style="height: 100%;width: 100%">
+    </div>
+    <form class="form-horizontal" novalidate>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">姓名</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" ng-model="vm.create.name"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">单位</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" ng-model="vm.create.org"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">职称</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" ng-model="vm.create.title"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">图片</label>
+        <div class="col-md-6">
+          <single-uploader url="vm.create.img_url"></single-uploader>
+          <span class="help-block">此图片用于用户端封面介绍，建议大小 244*340</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">简介</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" ng-model="vm.create.excerpt"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="" class="control-label col-md-2">老师介绍</label>
+        <div class="col-md-9">
+          <summernote class="summernote" height="300" lang="zh-CN" ng-model="vm.create.introduce"
+                      placeholder="请输入课程介绍"></summernote>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-9 col-md-offset-2">
+          <div class="btn btn-primary" ng-click="vm.save()">保存</div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

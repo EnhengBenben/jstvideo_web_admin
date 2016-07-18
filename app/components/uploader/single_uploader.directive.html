@@ -1,0 +1,6 @@
+<div>
+  <input class="form-control" type="file" nv-file-select uploader="uploader"/>
+  <div class="progress progress-small" ng-if="uploader.queue.length">
+    <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+  </div>
+</div>

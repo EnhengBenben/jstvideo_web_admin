@@ -1,0 +1,66 @@
+<div class="ibox">
+  <div class="ibox-title">
+    <h5>用户详情</h5>
+    <div class="ibox-tools">
+      <a ng-click="vm.cancel()"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="ibox-content">
+    <form class="form-horizontal">
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">姓名</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.name}}</p>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">性别</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.gender}}</p>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">单位</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.org}}</p>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">单位地址</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.org_addr}}</p>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">职称</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.title}}</p>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">身份</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.identity}}</p>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">学历</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.education}}</p>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">状态</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.status}}</p>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="" class="control-label col-md-2">注册日期</label>
+        <div class="col-md-8">
+          <p style="margin: 8px 0;">{{vm.user.created_at | date:'yyyy-MM-dd hh:mm:ss'}}</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
